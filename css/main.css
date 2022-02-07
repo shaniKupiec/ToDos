@@ -1,0 +1,37 @@
+body {
+    background-color: lightyellow
+}
+
+.todo-filter {
+    background-color: rgb(248, 177, 177);
+    padding: 5px;
+}
+
+.todo-sort {
+    background-color: rgb(248, 206, 177);
+    padding: 5px;
+}
+
+.todo-stat {
+    background-color: rgb(157, 193, 228);
+    padding: 5px;
+    margin: 5px;
+}
+
+.todo-stat span {
+    color: rgb(95, 27, 27);
+    font-weight: bold;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.time-stamp{
+    color: rgb(157, 193, 228);
+    /* font-size: small; */
+}
+
+.importance{
+    color: red;
+}

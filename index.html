@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos MVC</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <h1>Todos MVC</h1>
+
+    <section class="todo-filter">
+        <h4>Filter Todos</h4>
+        <select onchange="onSetFilter(this.value)">
+            <option value="ALL">All</option>
+            <option value="DONE">Done</option>
+            <option value="ACTIVE">Active</option>
+        </select>
+    </section>
+
+    <section class="todo-sort">
+        <h4>Sort Todos</h4>
+        <select onchange="onSetSort(this.value, 'AB')">
+            <option value="0">By Text</option>
+            <option value="A-Z">A - Z</option>
+            <option value="Z-A">Z - A</option>
+        </select>
+        <select onchange="onSetSort(this.value, 'TIME')">
+            <option value="0">recent</option>
+            <option value="RECENT">Recent To Do</option>
+            <option value="OLD">Former To Do</option>
+        </select>
+        <select onchange="onSetSort(this.value, 'IMP')">
+            <option value="0">importance</option>
+            <option value="IMPORTANT">Most important</option>
+            <option value="NOT-IMPORTANT">Least important</option>
+        </select>
+    </section>
+    <ul class="todo-list">
+    </ul>
+
+    <input type="text" name="todoTxt" placeholder="What need to be done?" />
+    <input type="text" name="todoImp" placeholder="how important from 1-3?" />
+    <button onclick="onAddTodo()">Add</button>
+
+    <section class="todo-stat">
+        Total Todos:
+        <span class="todos-total-count">3</span>
+        Active:
+        <span class="todos-active-count">2</span>
+    </section>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/todo-service.js"></script>
+    <script src="js/todo-controller.js"></script>
+</body>
+
+</html>
