@@ -1,6 +1,6 @@
 # My Todos
 
-<p>Keeps track of the user's tasks</p>
+<p>Keeps track of the users tasks</p>
 <p>Allows to add, change status, delete, filter and sort</p>
 <p>Learning project</p>
 
